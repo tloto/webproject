@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>id 群组 类</title>
+		<style type="text/css">
+			#box1{border:red solid 2px;background: yellow;}
+			#box2,#box3{border:red solid 2px;background: yellow;}/*box2,box3 与box1效果一样*/
+			.box4{border:red solid 2px;background: yellow;}/*class (可重复使用的id) box1效果一样*/
+			.box5{font-family: "微软雅黑";font-size: 30px;background: white;}
+			p{border:red solid 2px;background: yellow;font-family: "微软雅黑",arial;font-size: 34px;}/*所有的p标签属性描述 如果div设置，p直接换成div ，适用于所有标签*/
+			div p{border:red solid 2px;background: white;}/*div 下的p进行设置*/
+		</style>
+	</head>
+	<body>
+		<div id="box1">快1</div>
+		<div id="box1">快2</div>
+		
+		<div class="box4">快3</div>
+		<div class="box4 box5">快4</div><!--类继承 后定义的优先级高-->
+		<div class="box5 box4">快4</div><!--类继承 后定义的优先级高-->
+		<p>所有的p标签属性</p>
+		<p>所有的p标签属性</p>
+		<div>
+			<p>hello div p</p>
+		</div>
+		
+		<div>
+			STYLE 优先级<br />
+			类型（p{}）< 'class（.box)' < 'id (#box)'< 'style行间样式'<'js'<br />
+			同级别的后定义的优先级高
+		</div>
+		
+	</body>
+</html>

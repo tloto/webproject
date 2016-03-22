@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>浮动</title>
+		<style type="text/css">
+			.box1{background: green;width: 100px;height: 100px;float: left;}
+			.box2{background: red;width: 200px;height: 200px;}
+			.left{background: gray;width: 200px;height: 600px;float: left;}
+			.left div{background: green;width: 200px;height: 300px;border: 1px solid red;}
+			.center{background: gray;width: 200px;height: 600px;float: left;}
+			.center div{background: green;width: 200px;height: 200px;border: 1px solid red;}
+			.right{background: gray;width: 200px;height: 600px;float: left;}
+			.right span{background: green;width: 200px;height: 300px;border: 1px solid red;display: block;margin: 0px;padding: 0px;}
+			
+		</style>
+	</head>
+	<body>
+		
+		<div class="box1">
+			div1dddddd
+		</div>
+		<div class="box2">
+			div2dgsrgerg
+		</div>
+		
+		
+		<div style="background: gray;width: 500px;height: 500px;border: 2px solid white;">
+			<div class="box2">
+				div3dgsrgerg
+			</div>
+			<div class="box1">
+				div4dgsrgerg
+			</div>
+			
+		</div>
+		
+		<div style="width: 600px;height: 600px;background: yellow;">
+			
+			<div class="left">
+				<div></div>
+				<div></div>
+			</div>
+			<div class="center">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<div class="right">
+				<span></span>
+				<span></span>
+			</div>
+			
+		</div>
+	</body>
+</html>
