@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--
+    	作者：1162917226@qq.com
+    	时间：2016-06-02
+    	描述：学习地址
+    	描述：http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html
+    -->
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>flex布局</title>
+	<style type="text/css">
+		div{display: flex;width: 150px;height: 150px;border: 1px solid red;float: left;}
+		span{background: red;width: 40px;height: 40px;}
+	</style>
+</head>
+<body>
+<div style="justify-content: flex-start;">
+	<span>1</span>
+</div>
+<div style="justify-content: flex-end;">
+	<span>2</span>
+</div>
+<div style="justify-content: center;">
+	<span>3</span>
+</div>
+<div style="justify-content: space-around;">
+	<span>4</span>
+	<span>4-1</span>
+	<span>4-2</span>
+</div>
+<div style="justify-content: space-between;">
+	<span>4</span>
+	<span>4-1</span>
+	<span>4-2</span>
+</div>
+<div style="flex-direction: row;">
+	<span>5</span>
+	<span>5-1</span>
+	<span>5-2</span>
+</div>
+<div style="flex-direction: row-reverse;">
+	<span>5</span>
+	<span>5-1</span>
+	<span>5-2</span>
+</div>
+<div style="flex-direction: column;">
+	<span>6</span>
+	<span>6-1</span>
+	<span>6-2</span>
+</div>
+<div style="flex-direction: column-reverse;">
+	<span>6</span>
+	<span>6-1</span>
+	<span>6-2</span>
+</div>
+<div style="flex-direction: column;justify-content: flex-start;">
+	<span>7</span>
+	<span>7-1</span>
+	<span>7-2</span>
+</div>
+<div style="flex-direction: column;justify-content: center;">
+	<span>7</span>
+	<span>7-1</span>
+	<span>7-2</span>
+</div>
+<div style="flex-direction: column;justify-content: flex-end;">
+	<span>7</span>
+	<span>7-1</span>
+	<span>7-2</span>
+</div>
+<div style="flex-direction: column;justify-content: flex-start;align-items: flex-end;">
+	<span>7</span>
+	<span>7-1</span>
+	<span>7-2</span>
+</div>
+<div style="flex-direction: column;justify-content: flex-start;align-items: center;">
+	<span>7</span>
+	<span>7-1</span>
+	<span>7-2</span>
+</div>
+<div style="flex-direction: column;justify-content: space-between;">
+	<span>8</span>
+	<span style="align-self: center;">8-1</span>
+	<span style="align-self: flex-end;">8-2</span>
+</div>
+
+</body>
+</html>
