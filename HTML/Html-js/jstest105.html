@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>拖拽练习</title>
+	</head> 
+	<body>
+		
+		<div id="div1" style="width: 200px;height: 50px;background-color: red;" draggable="true" ondragstart="drag(event)" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<div id="div2" style="width: 200px;height: 50px;background-color: green;" draggable="true" ondragstart="drag(event)" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<div id="div3" style="width: 200px;height: 50px;background-color:blue;" draggable="true" ondragstart="drag(event)" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<div id="div4" style="width: 200px;height: 50px;background-color: orange;" draggable="true" ondragstart="drag(event)" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<div id="writeid">
+		
+		</div>
+	</body>
+	<script>
+	function allowDrop(ev){
+		ev.preventDefault();
+	}
+	
+	function drag(ev){
+		ev.dataTransfer.setData("Text",ev.target.id);
+	}
+	
+	function drop(ev){
+		ev.preventDefault();
+		var data = document.getElementById(ev.dataTransfer.getData("Text"));
+		var evTarget=ev.target;
+		if(data==evTarget){
+			return;
+		}
+		var compare=ev.clientY-evTarget.clientHeight/2;
+		if (compare>0) {
+			evTarget.parentNode.insertBefore(data,evTarget.nextSibling);
+		}else{
+			evTarget.parentNode.insertBefore(data,evTarget);
+		}
+		
+	}
+	
+	</script>
+</html>

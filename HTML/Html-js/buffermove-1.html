@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../../JS/Move.js"></script>
+		<script type="text/javascript">
+			function init(){
+				
+				var arr=document.getElementsByTagName('div');
+				arr[0].onmouseover=function(){
+					StartAnimation(this,'width',300);
+				};
+				arr[0].onmouseout=function(){
+					StartAnimation(this,'width',100);
+				};
+				
+				arr[1].onmouseover=function(){
+					StartAnimation(this,'height',100);
+				};
+				arr[1].onmouseout=function(){
+					StartAnimation(this,'height',40);
+				};
+				
+				arr[2].onmouseover=function(){
+					StartAnimation(this,'borderWidth',50);
+				};
+				arr[2].onmouseout=function(){
+					StartAnimation(this,'borderWidth',1);
+				};
+				
+				arr[3].onmouseover=function(){
+					StartAnimation(this,'fontSize',20);
+				};
+				arr[3].onmouseout=function(){
+					StartAnimation(this,'fontSize',15);
+				};
+				
+				arr[4].onmouseover=function(){
+					StartAnimation(this,'opacity',30);
+				};
+				arr[4].onmouseout=function(){
+					StartAnimation(this,'opacity',100);
+				};
+				
+			}
+		</script>
+	</head>
+	<body onload="init()">		
+		<div style="width: 100px;height: 40px;background: red;"></div>
+		<br />
+		<div style="width: 100px;height: 40px;background: red;border: black solid 1px;"></div>
+		<br />
+		<div style="width: 100px;height: 40px;background: red;border: black solid 1px;"></div>
+		<br />
+		<div style="width: 100px;height: 40px;background: red;">hello就是烦</div>
+		<br />
+		<div style="width: 100px;height: 40px;background: red;"></div>
+	</body>
+	
+</html>

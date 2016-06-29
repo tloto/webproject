@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>缓冲运动</title>
+		<script type="text/javascript">
+			function init(){
+				var ObjMove=document.getElementById('moveId');
+				
+				var TimerInte=setInterval(function(){
+					var Speed=(300 -ObjMove.offsetLeft)/7;
+					Speed=Math.ceil(Speed);
+					if(300 <=ObjMove.offsetLeft){
+						clearInterval(TimerInte);
+					}else{
+						ObjMove.style.left=ObjMove.offsetLeft+Speed+'px';
+					}
+				},30);
+				
+				
+				
+				arrMove();
+			}
+			
+			window.onscroll=function(){
+				
+				var scrowTop=document.documentElement.scrollTop||document.body.scrollTop;
+				var objDiv=document.getElementById('fixId');
+				objDiv.style.top=scrowTop+100+'px';
+			}
+			
+			function arrMove(){
+				
+				var arrData=document.getElementById('arrid');
+				var arr=arrData.getElementsByTagName('div');
+				
+				for (var i = 0; i < arr.length; i++) {
+//					arr.[i].Timer=null;
+					arr[i].onmouseover=function(){
+						StartAnimation(this,250);
+					};
+					arr[i].onmouseout=function(){
+						StartAnimation(this,100);
+					};
+				}
+				
+			}
+			
+			function StartAnimation(obj,targetWidth){
+				clearInterval(obj.Timer);
+				obj.Timer=setInterval(function(){
+						var Speed=(targetWidth-obj.offsetWidth)/7;
+						Speed=Speed>0? Math.ceil(Speed):Math.floor(Speed);
+						if (obj.offsetWidth==targetWidth) {
+							clearInterval(obj.Timer);
+						} else{
+							obj.style.width=obj.offsetWidth+Speed+'px';
+						}
+				},30);
+			}
+			
+			
+			
+			
+		</script>
+	</head>
+	<body onload="init()" style="height: 1500px;">
+		<div id="moveId" style="background: red; width: 100px;height: 100px;position: absolute"></div>
+		<div id="" style="position: absolute;left: 300px;background-color: black;width: 1px;height: 300px;">
+		</div>
+		
+		
+		<div id="fixId" style="width: 100px;height: 100px; position: absolute;top: 100px;right: 20px;background: green;">
+			
+		</div>
+		
+		<div id="arrid">			
+			<div style="width: 100px;height: 40px;background: red;"></div>
+			<br />
+			<div style="width: 100px;height: 40px;background: red;"></div>
+			<br />
+			<div style="width: 100px;height: 40px;background: red;"></div>
+		</div>
+		<br />
+		<div>注意 ：用 offsetWidth offsetHeight ...offset获取 ,一旦遇到设置边框，边距等，回去出现问题，这是offset的BUG，少用，尽量获取with，height等 </div>
+	</body>
+</html>

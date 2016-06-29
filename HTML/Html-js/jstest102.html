@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>图片切换</title>
+		
+		<script type="text/javascript">
+			
+			var num=0;
+			var dingshiqi;
+			var objliPublic;
+			var imgarray=["../../img/sunhonglei.png","../../img/u=1168297588,784628445&fm=21&gp=0.jpg","../../img/yangshi.png"];
+			window.onload=init;
+			function init(){
+				
+				var objul = document.createElement("ul");
+				 objul.style.width=50+"px";
+				 objul.style.height=200+"px";
+//				 objul.style.borderStyle="solid";
+//				 objul.style.borderColor="red";
+				 objul.style.float="left";
+				 objul.style.margin="0";
+				 objul.style.padding="0";
+				 objul.style.listStyle="none";
+				 for (var i=0;i<imgarray.length;i++) {
+				 	 var objli = document.createElement("li");
+				 	 objli.style.width=30+"px";
+				 	 objli.style.height=30+"px";
+				 	 objli.style.border="solid 1px red";
+				 	 objli.id="Myli"+i;
+				 	 objli.setAttribute('i',i);
+				 	 objli.onmouseover=function(){
+				 	 	StopInteval();
+				 	 	var j = parseInt(this.getAttribute('i'));
+				 	 	num=j;
+				 	 	changePic();
+				 	 };
+				 	 objli.onmouseout=function(){
+				 	 	Startinteval();
+				 	 };
+					 objli.innerHTML=i;
+					 objliPublic=objli;
+					objul.appendChild(objli);
+				 }
+				
+				document.body.appendChild(objul);
+				
+				
+				Startinteval();
+			}
+			
+			function Startinteval(){
+				dingshiqi=window.setInterval("changePic()",3000);
+			}
+			
+			function StopInteval(){
+				window.clearInterval(dingshiqi);
+			}
+			
+			function changePic(){
+				var n=num%imgarray.length;
+				var obj=document.getElementById("imgchange");
+				obj.src=imgarray[n];
+				objliPublic.style.background="white";
+				objliPublic=document.getElementById("Myli"+n);
+				objliPublic.style.background="red";
+				num++;
+			}
+			
+		</script>
+		
+		
+	</head>
+	<body>
+		
+		<img id="imgchange" src="../../img/sunhonglei.png" style="width: 300px;height: 200px; float: left;" onmouseover="StopInteval()" onmouseout="Startinteval()"/>
+	</body>
+</html>

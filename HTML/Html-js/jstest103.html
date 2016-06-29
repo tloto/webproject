@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>显示隐藏</title>
+		<style type="text/css">
+		.clear{clear: both;}
+		</style>
+		<script type="text/javascript">
+			function hidenBtn(){
+				
+				var HsObj=document.getElementById("hidonOrShow");
+				if (HsObj.style.display=="none") {
+					HsObj.style.display="block";
+				}else{
+					HsObj.style.display="none";
+				}
+			}
+			
+			var arr_province = ["请选择省/城市","北京市","上海市","天津市","重庆市","深圳市","广东省"];
+			var arr_city = [
+							["请选择城市/地区"],
+							["东城区","西城区","朝阳区","宣武区","昌平区","大兴区","丰台区","海淀区"],
+							['宝山区','长宁区','丰贤区', '虹口区','黄浦区','青浦区','南汇区','徐汇区','卢湾区'],
+							['和平区', '河西区', '南开区', '河北区', '河东区', '红桥区', '塘古区', '开发区'],
+							['俞中区', '南岸区', '江北区', '沙坪坝区', '九龙坡区', '渝北区', '大渡口区', '北碚区'],
+							['福田区', '罗湖区', '盐田区', '宝安区', '龙岗区', '南山区', '深圳周边'],
+							['广州市','惠州市','汕头市','珠海市','佛山市','中山市','东莞市']
+						];
+			function init(){
+				
+				var provinceObj=document.form1.province;
+				provinceObj.options.length=arr_province.length;
+				for (var i = 0; i < arr_province.length; i++) {
+					 provinceObj.options[i].text = arr_province[i];
+				}
+			}
+			
+			function provinceChange(index){
+				var cityObj=document.form1.city;
+				cityObj.options.length=arr_city[index].length;
+				for (var i = 0; i < arr_city[index].length; i++) {
+					 cityObj.options[i].text = arr_city[index][i];
+				}
+				
+			}
+		</script>
+	</head>
+	<body onload="init()">
+		<div id="" style="width: 400px;border: solid 1px green;">
+			<div id="">
+				<div id=""style="float: left;">
+					购物车
+				</div>
+				<input type="button" name="" id="" value="点击按钮" style="width: 60px;float: right;" onclick="hidenBtn()"/>
+				<br class="clear"/>
+			</div>
+			<div id="hidonOrShow" style="border-top: 1px green solid;">
+				案件诶放假啊诶附件二爱微积分添加额覅案件诶放假啊诶附件二爱微积分添加额覅案件诶放假啊诶附件二爱微积分添加额覅案件诶放假啊诶附件二爱微积分添加额覅案件诶放假啊诶附件二爱微积分添加额覅案件诶放假啊诶附件二爱微积分添加额覅案件诶放假啊诶附件二爱微积分添加额覅案件诶放假啊诶附件二爱微积分添加额覅案件诶放假啊诶附件二爱微积分添加额覅案件诶放假啊诶附件二爱微积分添加额覅案件诶放假啊诶附件二爱微积分添加额覅案件诶放假啊诶附件二爱微积分添加额覅案件诶放假啊诶附件二爱微积分添加额覅案件诶放假啊诶附件二爱微积分添加额覅案件诶放假啊诶附件二爱微积分添加额覅案件诶放假啊诶附件二爱微积分添加额覅案件诶放假啊诶附件二爱微积分添加额覅案件诶放假啊诶附件二爱微积分添加额覅
+			</div>
+		</div>
+		<form action="#" method="post" name="form1">
+			省： <select name="province" onchange="provinceChange(this.selectedIndex)"></select>
+			市:  <select name="city"></select>
+		</form>
+		<label for="afafee">aefef</label>
+	</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>下拉菜单</title>
+		<style type="text/css">
+			ul,li{margin: 0;padding: 0;}
+			li{list-style: none;}
+			
+			#shareid{background: gray;width: 100px;height: 200px;top: 200px;left: 0px;position: absolute;}
+			#shareid span{background: yellow;width: 20px;height: 60px;top: 70px;left: 100px;text-align: center;position: absolute;}
+			
+		</style>
+		
+	</head>
+	<body>
+		
+		<ul id="ulP" style="border: black solid 1px;height: 25px;">
+			<li id="LI-link" style="border: solid green 1px;display: block;width: 80px;text-align: center; position: relative;height: 25px;">
+				<a>微博</a>
+				<ul id="ULL" style="background: red;">
+					<li onmouseover="backgroudFunShow(event)" onmouseout="backGroudHiden(event)">私信</li>
+					<li onmouseover="backgroudFunShow(event)" onmouseout="backGroudHiden(event)">评论</li>
+					<li onmouseover="backgroudFunShow(event)" onmouseout="backGroudHiden(event)">@我</li>
+				</ul>
+			</li>
+		</ul>
+		<br style="clear: both;"/>
+		<div style="border: solid red 1px;">asdfaff</div>
+		
+		
+		<div id="shareid">
+			<span>分享到</span>
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</body>
+	<script type="text/javascript">
+		
+		document.getElementById('LI-link').onmouseover=function(){
+			document.getElementById('ULL').style.display='block';
+		};
+		document.getElementById('LI-link').onmouseout=function(){
+			document.getElementById('ULL').style.display='none';
+		};
+		
+		function backgroudFunShow(ev){
+			ev.target.style.backgroundColor='white';
+		}
+		function backGroudHiden(ev){
+			ev.target.style.backgroundColor='red';
+		}
+		
+		
+		document.getElementById('shareid').onmouseover=function(){
+			StartMove(this,0,10);
+		};
+		document.getElementById('shareid').onmouseout=function(){
+			StartMove(this,-100,10);
+		};
+		
+		var Timer;
+		
+		function StartMove(obj,moveLeft,moveSpeed){
+			var mvSpeed=Math.abs(moveSpeed);
+			clearInterval(Timer);
+			if (obj.offsetLeft<moveLeft) {
+				Timer=setInterval(function(){
+					obj.style.left=obj.offsetLeft+mvSpeed+'px';
+					if(obj.offsetLeft>=moveLeft){
+						clearInterval(Timer);
+					}
+				},20);
+			} else if(obj.offsetLeft>moveLeft){
+				Timer=setInterval(function(){
+					obj.style.left=obj.offsetLeft-mvSpeed+'px';
+					if(obj.offsetLeft<=moveLeft){
+						clearInterval(Timer);
+					}
+				},30);
+			}
+			
+			
+			
+		}
+		
+		
+	</script>
+</html>

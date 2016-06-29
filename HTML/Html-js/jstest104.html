@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>增删节点</title>
+		<script type="text/javascript">
+			function addSpec(obj){
+				var newli=obj.cloneNode(true);
+				newli.innerHTML=newli.innerHTML.replace("[+]","[-]")
+				newli.innerHTML=newli.innerHTML.replace("addSpec","removeSpec")
+				obj.parentNode.insertBefore(newli,obj.nextSibling);
+			}
+			
+			function removeSpec(obj){
+//				obj.parentNode.removeChild(obj);  //等价于下面
+				obj.remove();
+			}
+		</script>
+	</head>
+	<body>
+		
+		<ul>
+			<li><label onclick="addSpec(this.parentNode)">[+]</label>颜色：<input type="text" name="" id="" value="" /></li>
+		</ul>
+		
+	</body>
+</html>
