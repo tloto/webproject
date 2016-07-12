@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../../JS/jQuery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				/*
+				var odiv=$('#divid');
+				odiv.html('hello');
+				odiv.css('background','red');
+				odiv.css('height','50px');
+				odiv.click(function(){
+					alert('点击事件！');
+				});//等价于下面*/
+				$('#divid')
+				.html('hello')
+				.css({'background':'red','height':'50px'})
+				.click(function(){
+					alert('点击事件');
+				});
+				
+				
+				alert($('#divid').attr('title'));
+				$('#divid').attr('title','title Has changed');
+				alert($('#divid').attr('title'));
+				
+				$('#divid').attr({'title':'title Has changed','class':'class has changed'});
+				alert($('#divid').attr('class'));
+			});
+		</script>
+		
+	</head>
+	<body>
+		
+		<div id="divid" title="hello Title" class="helloClass">
+			
+		</div>
+	</body>
+</html>

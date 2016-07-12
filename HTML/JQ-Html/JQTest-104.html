@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>运动</title>
+		<script src="../../JS/jQuery.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+//				$('#idid1').animate({width:300,height:300,opacity:0.5},1000,'linear',function(){
+//					
+//					$(this).html('操作完成啦');
+//					
+//				});
+				
+				$('#idid1').animate({width:300},1000).delay(1000).animate({height:300},1000,function(){
+					
+				});
+				
+				$('idid2').on('click',function(){
+					
+					//$('#idid1').stop();//只能停止当前任务,不能停止
+					//$('#idid1').stop(true);//停止所有动画，包括未执行的
+					$('#idid1').finish();
+					
+				});
+				
+				
+				$('ul').delegate('li','click',{name:'hello'},function(ev){
+					alert(ev.data.name);
+				});
+				
+				$('#idid1').on('show',function(){
+					alert(123);
+				});
+				$('#idid1').trigger('show');
+				
+				
+				
+				
+			});
+			
+			
+		</script>
+		
+	</head>
+	<body>
+		
+		<ul>
+			<li>dddd</li>
+			<li>dddd</li>
+			<li>dddd</li>
+			<li>dddd</li>
+			<li>dddd</li>
+		</ul>
+		
+		
+		<div id="idid2" style="width: 20px;height: 20px;background: rgba(0,152,50,0.3);">
+			
+		</div>
+		<div id="idid1" style="width: 20px;height: 20px;background: red;">
+			
+		</div>
+	</body>
+</html>

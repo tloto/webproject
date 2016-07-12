@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>轮播图</title>
+		<script src="../../JS/Move.js"></script>
+		<script type="text/javascript">
+			window.onload=function(){
+				var data=document.getElementById('ididid');
+				setStyle(data,{border: 'red solid 1px',width:'100px',height:'100px'})
+				
+				startAnimationWithGroup(data,{width:300,height:300},function(){
+					data.style['border']='solid black 1px';
+				});
+				
+			}
+			
+		</script>
+		
+	</head>
+	<body>
+		<div id="ididid">
+		</div>
+	</body>
+	
+</html>

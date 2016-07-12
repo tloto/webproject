@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../../JS/jQuery.min.js"></script>
+		<script type="text/javascript">
+		$(function(){
+			alert($('#bianjuId').width());//width
+			alert($('#bianjuId').innerWidth());//width+padding
+			alert($('#bianjuId').outerWidth());//width+padding+border
+			alert($('#bianjuId').outerWidth(true));//width+padding+border+margin
+			
+			$('#bianjuId').on('click mouseover',function(){
+				
+				alert('hello');
+				
+			});
+			
+			
+			$('.nimadan').css({'background':'blue','width':'100px','height':'100px'}).on({
+				'click':function(){
+					alert('click 事件');
+				},
+				'mouseover':function(){
+					alert('mouseover 事件');
+					$(this).off('mouseover');
+				}
+			});
+			
+			
+			$('div').each(function(i,elem){
+				$(elem).html(i);
+			});
+			
+		
+		});
+			
+		</script>
+	</head>
+	<body>
+		<div id="bianjuId" style="background: red; width: 100px;height: 100px;border: 10px solid green;margin: 10px;padding: 10px;"></div>
+		
+		<div class="nimadan">
+			
+		</div>
+		
+	</body>
+</html>

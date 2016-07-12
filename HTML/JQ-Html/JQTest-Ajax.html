@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>      
+	<head>
+		<meta charset="UTF-8">
+		<title>jquere Ajax练习</title>
+		<script src="../../JS/jQuery.min.js"></script>
+		<script type="text/javascript">
+		
+			$(function(){
+//				$('#div1').load('lesson1.txt');
+
+//				$('#div1').load('lesson1.txt p');//带p标签的内容
+
+//				$('#div1').load('lesson1.txt #spId');//带p标签的内容
+
+
+//				$('#div1').load('../lesson1.txt',function(responsTxt,statusTxt,xhr){
+//					if(statusTxt=='success')
+//						alert('数据加载成功');
+//					if(statusTxt=='error')
+//						alert('ERROR: '+xhr.status+':'+xhr.statusText);
+//					
+//				});
+				
+				
+//				$.get('lesson1.txt', function(data, status,xhp){
+//					alert(data);
+//				});
+
+
+//jsonp跨域  了解
+
+				var url='http://appback.xjapan.cn/html5Test/helloFn';
+//				$.ajax({
+//					url:url,
+//					dataType:'jsonp',
+//					async:false,
+//					type:'get',
+//					data:'',
+//					jsonp: "callback",//传递给请求处理程序或页面的，用以获得jsonp回调函数名的参数名(默认为:callback)
+//					success:function(data){
+//						alert(data.hello);
+//					}
+//					,
+//					error:function(XMLHttpRequest, textStatus, errorThrown){
+//					alert(XMLHttpRequest.status);
+//				    alert(XMLHttpRequest.readyState);
+//				    alert(textStatus);
+//					}
+//					});
+					
+					$.ajax({
+					url:url,
+					dataType:'jsonp',
+					async:false,
+					type:'post',
+					data:'',
+					jsonp: "callback",//传递给请求处理程序或页面的，用以获得jsonp回调函数名的参数名(默认为:callback)
+					success:function(data){
+						alert(data.hello);
+					}
+					,
+					error:function(XMLHttpRequest, textStatus, errorThrown){
+					alert(XMLHttpRequest.status);
+				    alert(XMLHttpRequest.readyState);
+				    alert(textStatus);
+					}
+					});
+					
+					
+					
+				
+			});
+
+
+		</script>
+	</head>
+	<body>
+		<div id="div1">
+			
+		</div>
+	</body>
+</html>

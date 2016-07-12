@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../../JS/jQuery.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('div').css('background','red');
+				$('div').filter('.boxx').css({'background':'green','font-size':'30px'});
+				$('.box2').css('border','solid 1px white');
+				$('div').has('span').css({'font-size':'30px','color':'white'});
+				$('.box3').next().html('我是box3的下一个节点').css('font-size','30px');
+				$('.box3').prev().html('我是box3的上一个节点').css('font-size','30px');
+				
+				$('h2').eq(1).css('background','red');
+				
+			});
+			
+			
+		</script>
+	</head>
+	<body>
+		<div id="niceid" title="123" class="boxx">hello</div>
+		<div class="box2">divbox2</div>
+		<div><span>span标签</span></div>
+		<div>jkadf</div>
+		<div class="box3">box3</div>
+		<div>jkadf</div>
+		<div>jkadf</div>
+		<br />
+		
+		<span id="spanid">
+			<h2>h2test</h2>
+			<h3>h3test</h3>
+			<h3>h3test</h3>
+			<h2>h2test</h2>
+			<h3>h3test</h3>
+			<h2>h2test</h2>
+		</span>
+		
+		
+	</body>
+</html>

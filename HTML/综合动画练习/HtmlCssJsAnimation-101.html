@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			@-moz-keyframes myfirst{
+				from{width: 100px;}
+				to{width: 300px;}
+			}
+			@-ms-keyframes myfirst{
+				from{width: 100px;}
+				to{width: 300px;}
+			}
+			@-webkit-keyframes myfirst{
+				from{width: 100px;}
+				to{width: 300px;}
+			}
+			@keyframes myfirst{
+				from{width: 100px;}
+				to{width: 300px;}
+			}
+			div{
+				-webkit-transition: ease 2s;
+				-moz-transition: ease 2s;
+				-ms-transition: ease 2s;
+				transition: ease 2s;
+			}
+		</style>
+		<script type="text/javascript">
+		
+			window.onload=function(){
+				var ArrDiv=document.getElementsByTagName('div');
+				
+				ArrDiv[0].onmouseover=function (){
+					this.style.width=300+'px';
+					this.style.height=100+'px';
+				}
+				ArrDiv[0].onmouseout=function (){
+					this.style.width=100+'px';
+					this.style.height=50+'px';
+				}
+				
+				
+				ArrDiv[1].onmouseover=function (){
+					this.style.transform='scale(2,2) rotate(45deg)';
+				}
+				ArrDiv[1].onmouseout=function (){
+					this.style.transform='scale(1,1) rotate(0deg)';
+				}
+				
+				
+				
+			}
+		
+		</script>
+		
+	</head>
+	<body>
+		<div style="width: 100px;height: 50px;background: red;"></div>
+		<br />
+		<div style="width: 100px;height: 100px;background: green;"></div>
+		
+	</body>
+</html>
