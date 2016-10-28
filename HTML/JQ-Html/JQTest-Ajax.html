@@ -48,13 +48,13 @@
 //				    alert(textStatus);
 //					}
 //					});
-					
+//					url='http://127.0.0.1:8545';
 					$.ajax({
 					url:url,
 					dataType:'jsonp',
 					async:false,
 					type:'post',
-					data:'',
+					data:'{jsonrpc:"2.0",method:"net_version",params:[],id:67}',
 					jsonp: "callback",//传递给请求处理程序或页面的，用以获得jsonp回调函数名的参数名(默认为:callback)
 					success:function(data){
 						alert(data.hello);
@@ -66,8 +66,6 @@
 				    alert(textStatus);
 					}
 					});
-					
-					
 					
 				
 			});

@@ -12,7 +12,6 @@ function getCookie(name){
 		}
 	}
 	return'';
-	
 }
 
 function removeCookie(name){

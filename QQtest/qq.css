@@ -1,0 +1,354 @@
+* {
+	margin: 0%;
+	padding: 0%;
+}
+
+li {
+	list-style: none;
+}
+
+body {
+	background-image: url(./img/72019_top.webp);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+
+/*body{background: url(./img/72019_top.webp) no-repeat center fixed;}*/
+
+.nav-bg {
+	background-color: #000000;
+	margin: auto;
+	width: 100%;
+	height: 40px;
+	position: fixed;
+	top: 0;
+	z-index: 999;
+}
+
+#content-all {
+	width: 1000px;
+	margin: 40px auto;
+}
+
+.main-content {
+	width: 100%;
+	border: solid red 1px;
+	position: relative;
+}
+
+.nav-content {
+	width: 1000px;
+	height: 100%;
+	margin: auto;
+}
+
+.nav-content ul {
+	height: 100%;
+	color: #bebebe;
+	font-size: 14px;
+}
+
+.nav-content ul li {
+	height: 100%;
+	float: left;
+	text-align: center;
+	line-height: 40px;
+}
+
+.nav-content a {
+	text-decoration: none;
+	color: #bebebe;
+}
+
+#nav-content-qqImg {
+	background: url(img/icenterspritcow@2x.png) no-repeat 0 -2px;
+	background-size: 311px 70px;
+	width: 90px;
+	height: 41px;
+	padding: 0;
+	margin-right: 10px;
+}
+
+#nav-content-qqImg a {
+	height: 100%;
+	display: block;
+}
+
+.ul-icon {
+	background: url(img/31.32-adg160825172751@2x.png) no-repeat;
+	background-size: 554px 388px;
+	font-size: 0%;
+	width: 16px;
+	height: 16px;
+	display: block;
+}
+
+.ListCenter {
+	height: 100%;
+	display: block;
+	position: relative;
+}
+.ListCenter span {
+	float: left;
+}
+#personCenter{
+}
+#personCenter span{
+	margin-right: 10px;
+}
+.personCenter-i {
+	background-position: -323px -26px;
+	margin:12px 5px 12px 10px ;
+	float: left;
+}
+
+.MyHomePage-i {
+	background-position: -374px -260px;
+	margin: 12px 5px 12px 10px;
+	float: left;
+}
+
+.frends-i {
+	background-position: -374px -235px;
+	margin: 12px 5px 12px 10px;
+	float: left;
+}
+
+.Game-i {
+	background-position: -452px -1px;
+	margin: 12px 5px 12px 10px;
+	float: left;
+}
+.dessUp-i {
+	background-position: -374px -312px;
+	margin: 12px 5px 12px 10px;
+	float: left;
+}
+
+.drop-down-arrow{
+	font-size: 0%;
+	width: 0%;
+	height: 0%;
+	border: 3px solid #404040;
+	border-top-color: gray;
+	border-left-color: transparent;
+	border-bottom-color: transparent;
+	border-right-color: transparent;
+	float: right;
+	margin-top: 19px;
+	margin-right: 8px;
+	margin-left: 5px;
+}
+#diamond-Img{
+	background:url(img/icenterspritcow@2x.png) no-repeat -277px -21px;
+	background-size:311px 70px;
+	width: 16px;
+	height: 11px;
+	float: right;
+	font-size: 0%;
+	display: block;
+	margin-top: 15px;
+	margin-right: 5px;
+}
+
+#reset-img{
+	background: url(img/31.32-adg160825172751@2x.png) no-repeat -375px -79px;
+	width: 14px;
+	height: 14px;
+	background-size:554px 388px;
+	font-size: 0%;
+	float: right;
+	margin-top: 13px;
+	margin-right: 10px !important;
+}
+
+#login-out{
+	background: url(img/31.32-adg160825172751@2x.png) no-repeat -400px -53px;
+	width: 16px;
+	height: 14px;
+	background-size:554px 388px;
+	font-size: 0%;
+	float: right;
+	margin-top: 13px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+#MyTridings{
+	float: right;
+	height: 100%;
+	max-width: 86px;
+}
+
+.mytridings-IMG{
+	background: url(img/100.png) no-repeat 0px 0px;
+	background-size: 24px 24px;
+	width: 24px;
+	height: 24px;
+	float: left;
+	display: block;	
+	font-size: 0%;
+	margin: 8px 5px auto 3px;
+}
+
+.User-name{
+	max-width: 50px;
+	float: left;
+	font-size: 12px;
+}
+
+.textOverFlow-ellipsis{
+	display: inline-block;
+	overflow: hidden;
+	white-space: nowrap;
+	word-break: normal;
+	text-overflow: ellipsis;
+}
+
+.float-Right{
+	float: right !important;
+	display: block;
+}
+.search-box{
+	margin-top: 10px;
+	margin-right: 10px;
+	height: 20px;
+	background-color: rgba(255,255,255,.25);
+	border-radius: 2px;
+	padding-right: 2px;
+	margin-left: 5px;
+}
+.search-input{
+	background-color: rgba(255,255,255,.0);
+	border: none;
+	width: 105px;
+	height: 20px;
+	padding-left: 3px;
+	float: left;
+}
+.search-img{
+	background: url(img/31.32-adg160825172751@2x.png) no-repeat -401px -131px;
+	background-size:554px 388px;
+	width: 14px;
+	height: 14px;
+	font-size: 0%;
+	float: left;
+	margin-top: 2px;
+	margin-left: 5px;
+}
+
+.music-start-a{
+	background-color: rgba(255,255,255,0.25);
+	width: 22px;
+	height: 20px;
+	float: left;
+	display: block;
+	margin-top: 10px;
+	margin-right: 2px;
+	margin-left: 10px;
+}
+.music-melody-b{
+	background-color: rgba(255,255,255,0.25);
+	width: 27px;
+	height: 22px;
+	float: left;
+	display: block;
+	margin-top: 9px;
+	margin-right: 10px;
+}
+.music-Start-img{
+	background: url(img/31.32-adg160825172751@2x.png) no-repeat -405px -340px;
+	background-size:554px 388px;
+	width: 7px;
+	height: 12px;
+	display: block;
+	font-size: 0%;
+	margin-left: 8px;
+	margin-top: 4px;
+}
+.music-melody-img{
+	background: url(img/31.32-adg160825172751@2x.png) no-repeat -400px -370px;
+	background-size:554px 388px;
+	width: 15px;
+	height: 10px;
+	display: block;
+	font-size: 0%;
+	margin-left: 6px;
+	margin-top: 6px;
+}
+/******************头部***************/
+
+
+.header-top {
+	width: 100%;
+	height: 320px;
+	border: solid red 1px;
+	position: relative;
+}
+
+.user-space-info{
+	position: absolute;
+	top: 25px;
+	font-size: 30px;
+}
+
+.textShadow{
+	color: white;
+	text-shadow:1px 1px 1px rgba(0,0,0,0.2);
+}
+
+.level-img{
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
